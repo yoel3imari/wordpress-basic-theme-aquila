@@ -7,6 +7,16 @@
  * 
  */
 
+if (!defined('MYTHEME_DIR_PATH')) {
+    define('MYTHEME_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once MYTHEME_DIR_PATH . '/inc/helpers/autoloader.php';
+
+function get_mytheme_instance () { MYTHEME\Inc\MYTHEME::get_instance(); }
+
+get_mytheme_instance();
+
 function mt_enqueue_scripts()
 {
     // styles
