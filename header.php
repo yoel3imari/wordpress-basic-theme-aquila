@@ -27,5 +27,5 @@
     ?>
     <header class="header" role="banner">
         <!-- place navbar here -->
-        <?php get_template_part( 'components/headers/header_1' ) ?>
+        <?php get_template_part('components/headers/header_1') ?>
     </header>
