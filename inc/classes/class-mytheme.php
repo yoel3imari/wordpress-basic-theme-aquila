@@ -36,9 +36,30 @@ class MyTheme
             'flex-height' => true,
             'flex-width' => true
         ]);
-        add_theme_support( 'custom-background', [
+        add_theme_support('custom-background', [
             'default-color' => '#fff',
-            'default-img' => '', 
-        ] );
+            'default-img' => '',
+        ]);
+
+        add_theme_support('post-thumbnails');
+        add_theme_support('customize-selective-refresh-widgets');
+        add_theme_support('automatic-feed-links');
+        add_theme_support('html5', [
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+        ]);
+
+        add_editor_style();
+        add_theme_support('wp-block-styles');
+        add_theme_support('align-wide');
+
+        global $CONTENT_WIDTH;
+        if (!isset($CONTENT_WIDTH))
+            $CONTENT_WIDTH = 1240;
     }
 }
